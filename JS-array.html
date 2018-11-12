@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Loops</h2>
+Enter Limit: <input type="text" id="limit"></input>
+<button onclick="myFun()">ClickMe!</button>
+<ul id="demo"></ul>
+<button onclick="myFun2()">ClickMe!</button>
+<p id="car"></p>
+<script>
+function myFun(){
+var text = "";
+var n = document.getElementById("limit").value
+var i;
+for (i = 0; i < n; i++) {
+    text += "<input type='text' id='c"+i+"'></input><br>";
+}
+document.getElementById("demo").innerHTML = text;
+};
+function myFun2(){
+var car = [];
+var n = document.getElementById("limit").value
+var i;var id;
+for(i=0;i<n;i++){
+	id = "c"+i;
+	car.push(document.getElementById(id).value);
+}
+document.getElementById("car").innerHTML = car;
+};
+</script>
+
+</body>
+</html>
